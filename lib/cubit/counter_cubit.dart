@@ -6,5 +6,11 @@ class CounterCubit extends Cubit<int> {
   void increment() {
     emit(state+1);
   }
+  void decrement(){
+    if (state==0){
+      return;
+    }
+    emit(state-1);
+  }
 }
 // We need to pass the initial state to use the Cubit. Here the initial value is 0
